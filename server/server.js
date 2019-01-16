@@ -3,6 +3,7 @@ require('./config/config');
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const bodyParser = require('body-parser');
 
@@ -15,6 +16,10 @@ app.use(bodyParser.json());
 
 //Configuracion global de rutas
 app.use(require('./routes/index'));
+
+
+//habilitar la carpeta public
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 
