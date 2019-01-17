@@ -101,6 +101,11 @@ app.post('/categoria', verificaToken, (req, res) => {
 // Actualizar categoria
 //================================
 app.put('/categoria/:id', verificaToken, (req, res) => {
+    let id = req.params.id;
+
+    Categoria.findOneAndUpdate
+
+
 
 
 });
